@@ -96,7 +96,7 @@
     var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/kadir1003/ckqgtl53i0fum17rsqz0a3bry', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
-      center: [-122.411, 37.785], // starting position [lng, lat]
+      center: [38.963745, 35.243322], // starting position [lng, lat]
       zoom: 10,// starting zoom
       transformRequest: transformRequest
     });
@@ -105,7 +105,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1jBmi3fWIvYRUN9RB9YoHqVydAXkE6Z-dPrwSrUqLbXY/edit?usp=sharing',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQFIm_J44n9io4NhaslETodi2EGMe6z76k6vZVIBeNBD_LGJjIADKjnTMAIhSsJBv-77bMYtDG2AegY/pub?output=csv',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
