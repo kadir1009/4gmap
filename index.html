@@ -105,9 +105,8 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTsCoEoMfB7w61FYP7paxvycNJjHICouBvZVj2vy3HMu0z9IDDY1sQt7_pBweyfp6lskb5xH06L8yRU/pubhtml',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQFIm_J44n9io4NhaslETodi2EGMe6z76k6vZVIBeNBD_LGJjIADKjnTMAIhSsJBv-77bMYtDG2AegY/pub?output=csv',
         dataType: "text",
-        callback: addPoints,
         success: function (csvData) { makeGeoJSON(csvData); }
       });
 
@@ -115,8 +114,7 @@
 
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
-          latfield: 'Enlem',
-          lonfield: 'Boylam',
+          .coords(Testi yaptığınız konum koordinatını giriniz.)
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
